@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratachip - Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="public/logo.png" alt="Stratachip Logo" class="logo">
+                <span>StrataChip </span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#careers" class="nav-link">Careers</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="theme-selector">
+                    <select id="themeSelect">
+                        <option value="space">Space</option>
+                        <option value="semiconductor">Semiconductor</option>
+                        <option value="PCB">PCB</option>
+                    </select>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Video -->
+    <div class="video-background">
+        <video id="backgroundVideo" autoplay muted loop>
+            <source src="public/bg1.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">Stratachip</span>
+                <br>Technologies
+            </h1>
+            <p class="hero-subtitle">
+                Pioneering the future of aerospace technology through innovative engineering solutions in avionics, semiconductor design, PCB development, and embedded systems.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('services')">
+                    <i class="fas fa-rocket"></i>
+                    Explore Services
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">About Stratachip</h2>
+                <p class="section-subtitle">Leading aerospace engineering innovation</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Our Mission</h3>
+                    <p>To revolutionize aerospace technology through cutting-edge engineering solutions, delivering innovative systems that push the boundaries of what's possible in aviation and space exploration.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Our Vision</h3>
+                    <p>To be the global leader in aerospace engineering solutions, setting new standards for innovation, reliability, and performance in the aerospace industry.</p>
+                </div>
+            </div>
+
+            <div class="why-choose">
+                <h3>Why Choose Stratachip?</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-award"></i>
+                        <h4>Expert Team</h4>
+                        <p>Industry-leading engineers with specialized aerospace expertise</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Cutting-edge Technology</h4>
+                        <p>Latest tools and methodologies for superior results</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Quality Assurance</h4>
+                        <p>Rigorous testing and validation processes</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>Timely Delivery</h4>
+                        <p>Committed to meeting project deadlines</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Client Partnership</h4>
+                        <p>Collaborative approach to project success</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-globe"></i>
+                        <h4>Global Reach</h4>
+                        <p>Serving clients worldwide with local expertise</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>0+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>7</h3>
+                    <p>Expert Engineers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Support Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Our Services</h2>
+                <p class="section-subtitle">Comprehensive aerospace engineering solutions</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-service="avionics">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Avionics Systems</h3>
+                    <p>Advanced flight control systems, navigation, and communication solutions for modern aircraft.</p>
+                    <button class="expand-btn" onclick="toggleServiceDetails('avionics')">
+                        <i class="fas fa-chevron-down"></i>
+                        Learn More
+                    </button>
+                    <div class="service-details" id="avionics-details">
+                        <div class="details-content">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Flight Management Systems (FMS)</li>
+                                <li>Autopilot and Flight Control Systems</li>
+                                <li>Navigation and GPS Integration</li>
+                                <li>Communication Systems</li>
+                                <li>Weather Radar Integration</li>
+                            </ul>
+                            <h4>Applications:</h4>
+                            <ul>
+                                <li>Commercial Aviation</li>
+                                <li>Military Aircraft</li>
+                                <li>Unmanned Aerial Vehicles (UAVs)</li>
+                                <li>Space Vehicles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="semiconductor">
+                    <div class="service-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Semiconductor Design</h3>
+                    <p>Custom VLSI design and verification services for aerospace-grade semiconductor solutions.</p>
+                    <button class="expand-btn" onclick="toggleServiceDetails('semiconductor')">
+                        <i class="fas fa-chevron-down"></i>
+                        Learn More
+                    </button>
+                    <div class="service-details" id="semiconductor-details">
+                        <div class="details-content">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>ASIC Design and Development</li>
+                                <li>FPGA Implementation</li>
+                                <li>Physical Design and Layout</li>
+                                <li>Design Verification and Testing</li>
+                                <li>Power Optimization</li>
+                            </ul>
+                            <h4>Applications:</h4>
+                            <ul>
+                                <li>Flight Control Processors</li>
+                                <li>Signal Processing Units</li>
+                                <li>Communication Chips</li>
+                                <li>Sensor Interface ICs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="pcb">
+                    <div class="service-icon">
+                        <i class="fas fa-circuit-board"></i>
+                    </div>
+                    <h3>PCB Design</h3>
+                    <p>High-reliability PCB design and manufacturing for critical aerospace applications.</p>
+                    <button class="expand-btn" onclick="toggleServiceDetails('pcb')">
+                        <i class="fas fa-chevron-down"></i>
+                        Learn More
+                    </button>
+                    <div class="service-details" id="pcb-details">
+                        <div class="details-content">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Multi-layer PCB Design</li>
+                                <li>High-Speed Signal Routing</li>
+                                <li>EMI/EMC Compliance</li>
+                                <li>Thermal Management</li>
+                                <li>Flex and Rigid-Flex PCBs</li>
+                            </ul>
+                            <h4>Applications:</h4>
+                            <ul>
+                                <li>Avionics Control Units</li>
+                                <li>Power Distribution Systems</li>
+                                <li>Sensor Modules</li>
+                                <li>Communication Boards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="embedded">
+                    <div class="service-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Embedded Systems</h3>
+                    <p>Real-time embedded software and hardware solutions for aerospace applications.</p>
+                    <button class="expand-btn" onclick="toggleServiceDetails('embedded')">
+                        <i class="fas fa-chevron-down"></i>
+                        Learn More
+                    </button>
+                    <div class="service-details" id="embedded-details">
+                        <div class="details-content">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Real-time Operating Systems</li>
+                                <li>Device Driver Development</li>
+                                <li>Hardware Abstraction Layers</li>
+                                <li>Safety-Critical Software</li>
+                                <li>System Integration</li>
+                            </ul>
+                            <h4>Applications:</h4>
+                            <ul>
+                                <li>Flight Control Systems</li>
+                                <li>Engine Management</li>
+                                <li>Navigation Systems</li>
+                                <li>Monitoring and Diagnostics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Our Expert Team</h2>
+                <p class="section-subtitle">Meet the brilliant minds behind Stratachip</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="public/vishnu.jpg" alt="Vishnu A">
+                        <div class="team-badge">VA</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Vishnu A</h3>
+                        <p class="team-role">Hardware Engineer</p>
+                        <p class="team-specialty">Specialist in hardware solutions for aerospace</p>
+                        <div class="team-details" id="vishnu-details">
+                            <p><strong>Experience:</strong> 8+ years in aerospace hardware design</p>
+                            <p><strong>Education:</strong> M.Tech in Electronics Engineering</p>
+                            <p><strong>Expertise:</strong> Analog/Digital circuit design, Power systems, Signal processing hardware</p>
+                            <p><strong>Achievements:</strong> Led 15+ successful hardware projects, Patent holder in power management systems</p>
+                        </div>
+                        <div class="team-actions">
+                            <button class="read-more-btn" onclick="toggleTeamDetails('vishnu')">Read More</button>
+                            <a href="https://www.linkedin.com/in/vishnu-a-192568259/" target="_blank" class="portfolio-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="public/thara.jpg" alt="Tharaneesh">
+                        <div class="team-badge">TH</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Tharaneesh S</h3>
+                        <p class="team-role">Radar Communication Engineer</p>
+                        <p class="team-specialty">Expert in aerospace communication systems</p>
+                        <div class="team-details" id="tharaneesh-details">
+                            <p><strong>Experience:</strong> 7+ years in radar and communication systems</p>
+                            <p><strong>Education:</strong> M.Tech in Communication Engineering</p>
+                            <p><strong>Expertise:</strong> Radar signal processing, RF design, Satellite communication</p>
+                            <p><strong>Achievements:</strong> Developed advanced radar algorithms, Published 10+ research papers</p>
+                        </div>
+                        <div class="team-actions">
+                            <button class="read-more-btn" onclick="toggleTeamDetails('tharaneesh')">Read More</button>
+                            <a href="https://www.linkedin.com/in/tharaneesh-s-a0a454306/" target="_blank" class="portfolio-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="public/suriya.jpg" alt="Suriya">
+                        <div class="team-badge">SU</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Suriya B</h3>
+                        <p class="team-role">VLSI Physical Design Engineer</p>
+                        <p class="team-specialty">Expert in VLSI design for aerospace</p>
+                        <div class="team-details" id="suriya-details">
+                            <p><strong>Experience:</strong> 6+ years in VLSI physical design</p>
+                            <p><strong>Education:</strong> M.Tech in VLSI Design</p>
+                            <p><strong>Expertise:</strong> Floor planning, Placement & Routing, Timing closure</p>
+                            <p><strong>Achievements:</strong> Optimized 20+ chip designs, Expert in advanced node technologies</p>
+                        </div>
+                        <div class="team-actions">
+                            <button class="read-more-btn" onclick="toggleTeamDetails('suriya')">Read More</button>
+                            <a href="https://www.linkedin.com/in/suriyab12/" target="_blank" class="portfolio-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="public/suhash.png" alt="Suhash">
+                        <div class="team-badge">SH</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Suhash</h3>
+                        <p class="team-role">VLSI Verification Engineer</p>
+                        <p class="team-specialty">Expert in VLSI verification for aerospace</p>
+                        <div class="team-details" id="suhash-details">
+                            <p><strong>Experience:</strong> 5+ years in VLSI verification</p>
+                            <p><strong>Education:</strong> M.Tech in Electronics & Communication</p>
+                            <p><strong>Expertise:</strong> SystemVerilog, UVM, Formal verification, Coverage analysis</p>
+                            <p><strong>Achievements:</strong> Verified 25+ complex designs, Reduced verification time by 40%</p>
+                        </div>
+                        <div class="team-actions">
+                            <button class="read-more-btn" onclick="toggleTeamDetails('suhash')">Read More</button>
+                            <a href="https://www.linkedin.com/in/suhash-eswaramoorthy-391b2333b/" target="_blank" class="portfolio-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="public/basker.png" alt="Vijayabaskar">
+                        <div class="team-badge">VB</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Vijayabaskar</h3>
+                        <p class="team-role">PCB Design Engineer</p>
+                        <p class="team-specialty">Expert in PCB design and innovation</p>
+                        <div class="team-details" id="vijayabaskar-details">
+                            <p><strong>Experience:</strong> 7+ years in PCB design</p>
+                            <p><strong>Education:</strong> B.Tech in Electronics Engineering</p>
+                            <p><strong>Expertise:</strong> High-speed PCB design, EMI/EMC, Multi-layer boards</p>
+                            <p><strong>Achievements:</strong> Designed 100+ PCBs, Specialist in aerospace-grade boards</p>
+                        </div>
+                        <div class="team-actions">
+                            <button class="read-more-btn" onclick="toggleTeamDetails('vijayabaskar')">Read More</button>
+                            <a href="https://www.linkedin.com/in/vijayabaskar-s-583565259/" target="_blank" class="portfolio-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="public/sudha.jpg" alt="Sudharsan">
+                        <div class="team-badge">SD</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Sudharsan</h3>
+                        <p class="team-role">PCB Design Engineer</p>
+                        <p class="team-specialty">Focused on efficient PCB solutions</p>
+                        <div class="team-details" id="sudharsan-details">
+                            <p><strong>Experience:</strong> 5+ years in PCB design</p>
+                            <p><strong>Education:</strong> B.Tech in Electronics & Communication</p>
+                            <p><strong>Expertise:</strong> Flex-rigid PCBs, Cost optimization, Manufacturing DFM</p>
+                            <p><strong>Achievements:</strong> Reduced PCB costs by 30%, Expert in flexible circuits</p>
+                        </div>
+                        <div class="team-actions">
+                            <button class="read-more-btn" onclick="toggleTeamDetails('sudharsan')">Read More</button>
+                            <a href="https://www.linkedin.com/in/sudharsan-b-33a6ba34b/" target="_blank" class="portfolio-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="public/varun.jpg" alt="Varun">
+                        <div class="team-badge">VR</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Varun</h3>
+                        <p class="team-role">Marketing Specialist</p>
+                        <p class="team-specialty">Strategic marketer for aerospace technologies</p>
+                        <div class="team-details" id="varun-details">
+                            <p><strong>Experience:</strong> 6+ years in aerospace marketing</p>
+                            <p><strong>Education:</strong> MBA in Marketing</p>
+                            <p><strong>Expertise:</strong> B2B marketing, Technical sales, Market analysis</p>
+                            <p><strong>Achievements:</strong> Increased client base by 200%, Expert in aerospace market trends</p>
+                        </div>
+                        <div class="team-actions">
+                            <button class="read-more-btn" onclick="toggleTeamDetails('varun')">Read More</button>
+                            <a href="https://www.linkedin.com/in/varun-s-b97392259/" target="_blank" class="portfolio-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="careers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Join Our Team</h2>
+                <p class="section-subtitle">Shape the future of aerospace technology with us</p>
+            </div>
+            
+            <div class="careers-content">
+                <div class="company-culture">
+                    <h3>Why Work at Stratachip?</h3>
+                    <div class="culture-grid">
+                        <div class="culture-item">
+                            <i class="fas fa-rocket"></i>
+                            <h4>Innovation First</h4>
+                            <p>Work on cutting-edge aerospace projects</p>
+                        </div>
+                        <div class="culture-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Collaborative Team</h4>
+                            <p>Join a team of passionate engineers</p>
+                        </div>
+                        <div class="culture-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Career Growth</h4>
+                            <p>Continuous learning and development</p>
+                        </div>
+                        <div class="culture-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <h4>Work-Life Balance</h4>
+                            <p>Flexible working arrangements</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-openings">
+                    <h3>Current Opening</h3>
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h4>Senior Aerospace Engineer</h4>
+                            <span class="job-type">Full-time</span>
+                        </div>
+                        <div class="job-details">
+                            <p><strong>Location:</strong> Bangalore, India</p>
+                            <p><strong>Experience:</strong> 5+ years</p>
+                            <p><strong>Department:</strong> Engineering</p>
+                        </div>
+                        <div class="job-description">
+                            <h5>Responsibilities:</h5>
+                            <ul>
+                                <li>Lead aerospace system design and development</li>
+                                <li>Collaborate with cross-functional teams</li>
+                                <li>Ensure compliance with aerospace standards</li>
+                                <li>Mentor junior engineers</li>
+                            </ul>
+                            <h5>Requirements:</h5>
+                            <ul>
+                                <li>M.Tech/B.Tech in Aerospace/Electronics Engineering</li>
+                                <li>Experience in avionics or aerospace systems</li>
+                                <li>Strong problem-solving skills</li>
+                                <li>Knowledge of aerospace standards (DO-178C, DO-254)</li>
+                            </ul>
+                        </div>
+                        <button class="apply-btn" onclick="applyForJob('Senior Aerospace Engineer')">
+                            <i class="fas fa-paper-plane"></i>
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="benefits">
+                    <h3>Benefits & Perks</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Health Insurance</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Learning & Development</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-plane"></i>
+                            <span>Travel Opportunities</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Free Meals & Snacks</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>Gym Membership</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Flexible Hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Get In Touch</h2>
+                <p class="section-subtitle">Ready to start your aerospace project?</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>stratachip@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 9876543210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Electronic City, Bangalore, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="company" name="company" placeholder="Company Name">
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select Service</option>
+                            <option value="avionics">Avionics Systems</option>
+                            <option value="semiconductor">Semiconductor Design</option>
+                            <option value="pcb">PCB Design</option>
+                            <option value="embedded">Embedded Systems</option>
+                            <option value="consultation">Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/logo.png" alt="Stratachip Logo">
+                        <span>Stratachip</span>
+                    </div>
+                    <p>Leading aerospace engineering solutions for the future of aviation and space exploration.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Avionics Systems</a></li>
+                        <li><a href="#services">Semiconductor Design</a></li>
+                        <li><a href="#services">PCB Design</a></li>
+                        <li><a href="#services">Embedded Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/stratachip-technologies-5a34b3387/"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stratachip. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
